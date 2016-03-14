@@ -7,4 +7,4 @@ v0.2
 
 &copy; 北京大学软工所
 
-http://www.unias.org/trac/docklet
+http://docklet.unias.org
