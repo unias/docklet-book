@@ -1,4 +1,4 @@
-## 一些有序的 Notebooks 示例 ##
+## 一些有趣的 Notebook 示例 ##
 
 https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks 收集了一些用 Notebook 进行各种工作的样例。Docklet 预安装了常用的 [Python3](python.md) 和 
 [R](r.md) 软件包，如果某些软件包没有安装，请用户通过 `pip3` 等命令自行安装。 

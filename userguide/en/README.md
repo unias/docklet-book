@@ -1,7 +1,7 @@
 Docklet User Guide
 ===============
 
-v0.2
+v0.25
 
 Feb 20, 2016
 
