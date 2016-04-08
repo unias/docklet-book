@@ -1,9 +1,9 @@
 Docklet User Guide
 ===============
 
-v0.25
+v0.2.6
 
-Feb 20, 2016
+Apr 8, 2016
 
 &copy; Software Engineering Institute, Peking University
 
