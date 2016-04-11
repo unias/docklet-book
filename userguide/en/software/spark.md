@@ -29,6 +29,10 @@ root@host-0:/home/spark# ssh root@host-2 /home/spark/sbin/start-slave.sh spark:/
 
 Done, the cluster is ready.
 
+** Note **
+
+Docklet provides two scripts in `sbin` for fast starting and stop spark clusters. The `dl_start_spark.sh` can automatically start a spark cluster, the master of which is host-0, and all vnodes are slaves. The `dl_stop_spark.sh` can stop the spark cluster started by `dl_start_spark.sh`.
+
 Now running an example 
 
 ```
