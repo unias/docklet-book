@@ -25,6 +25,13 @@ root@host-0:/home/spark# ssh root@host-1 /home/spark/sbin/start-slave.sh spark:/
 root@host-0:/home/spark# ssh root@host-2 /home/spark/sbin/start-slave.sh spark://host-0:7077
 ```
 
+** 注意 **
+
+sbin 目录下有两个Docklet 提供的脚本, 其中 `dl_start_spark.sh` 可以自动启动
+spark 集群, host-0 为 master, 所有节点皆为 slave. `dl_stop_spark.sh`
+自动停止当前的spark 集群。
+
+
 运行一个示例
 
 ```
