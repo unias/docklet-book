@@ -34,3 +34,6 @@
   * [R 软件包](notebook/r.md)
   * [使用Notebook](notebook/nb.md)
   * [各种样例](notebook/gallery.md)
+  * [python数据分析样例](notebook/docklet-bigdata-python.md)
+  * [R数据分析样例](notebook/docklet-bigdata-r.md)
+  * [spark大数据分析样例](notebook/docklet-bigdata-spark.md)
