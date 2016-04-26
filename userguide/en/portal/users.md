@@ -17,8 +17,7 @@ By clicking it, you can enter the activating page. Your E-mail, student/staff ID
 
 Your browser will log out Docklet automatically, re-login is required to refresh user info.Before your request is verified, a notification will be shown in upper left corner.It can be closed by clicking.
 
-## 试用 ##
-docklet支持用户以访客模式试用，在你的帐号审核通过之前，你可以通过点击主页的have a try按钮进入
+## Guest Mode ##
+Users can try to use docklet in guest mode. Before your account is activated, you can click the 'have a try' link to enter guest mode.
 
-
-试用界面，在试用模式下，你可以点击Go按钮进入到一个workspace中。
+You can enter a workspace through the 'go' button.
