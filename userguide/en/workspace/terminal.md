@@ -46,3 +46,36 @@ $ apt-get clean
 
 About `apt-get`, please refer to
 the [official help](https://help.ubuntu.com/community/AptGet/Howto).
+
+### Using your local terminal ###
+
+Users sometimes want to access docklet using their favorite local terminal in local computer. Since docklet vnode is behind the firewall, users can not connect to their vnodes directly, but can do so by way of a public ssh server.
+
+Suppose there is an ssh server with public address **pub.ssh**, your account
+name at this server is **myname** .
+
+Execute the following command in your docklet vnode:
+
+```
+ssh -fNR 2222:localhost:22 myname@pub.ssh
+```
+
+Enter the passphrase. If success, then all connection to port 2222 of 
+pub.ssh will be forwarded to vnode **localhost:22**. 
+
+Now open your favorite local terminal in your local computer and ssh to
+**pub.ssh**,
+
+```
+ssh myname@pub.ssh
+```
+
+Then execute ssh to connect to localhost:2222 in pub.ssh:
+
+```
+ssh root@localhost -p 2222
+```
+
+It may ask for a passphrase for root at the docklet vnode. You can set a passphase in the dockelt vnode using **passwd** command.
+
+More about ssh port forwarding, users may refer to ssh manual.

@@ -43,3 +43,38 @@ $ apt-get clean
 
 有关`apt-get`，可参阅 
 [帮助文档](https://help.ubuntu.com/community/AptGet/Howto)。
+
+### 使用本地终端访问 ###
+
+用户有时希望用本地计算机上的终端通过ssh访问docklet vnode. 由于docklet
+vnode 在防火墙后面，因此用户不能直接用自己的计算机访问，但可以借助于一个
+公共的ssh服务器实现.
+
+假定有一个公共ssh服务器, 地址为 **pub.ssh**, 用户在该服务器上有一个帐号
+**myname** .
+
+用户在docklet vnode里执行下面的命令:
+
+```
+ssh -fNR 2222:localhost:22 myname@pub.ssh
+```
+
+成功后，所有连接到 **pub.ssh** 服务器上的 2222 端口 的ssh 请求都会转到
+docklet vnode的 **localhost:22** 地址.
+
+在本地计算机的终端中执行ssh命令 
+
+```
+ssh myname@pub.ssh
+```
+
+在pub.ssh上面再执行ssh命令连接到本地的2222端口:
+
+```
+ssh root@localhost -p 2222
+```
+
+此时可能会要求输入密码。该密码是docklet vnode上的账号密码。可以用**passwd**
+命令为root用户设置一个，即可登录。
+
+更多关于 ssh 端口转发的技术，可网上咨询相关资料。
