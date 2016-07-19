@@ -1,5 +1,5 @@
 {
     "plugins": [
-        "language-picker"
+        "language-picker","mathjax"
     ]
 }
