@@ -105,28 +105,7 @@ div#notebook {
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
+</head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -155,14 +134,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#20363;1--&#30002;&#28919;&#29123;&#28903;">&#20363;1  &#30002;&#28919;&#29123;&#28903;<a class="anchor-link" href="#&#20363;1--&#30002;&#28919;&#29123;&#28903;">&#182;</a></h3><p>甲烷(<img src="http://www.forkosh.com/mathtex.cgi? \( CH_4\)"> ) 燃烧的反应如下：</p>
+<h3 id="&#20363;1--&#30002;&#28919;&#29123;&#28903;">&#20363;1  &#30002;&#28919;&#29123;&#28903;<a class="anchor-link" href="#&#20363;1--&#30002;&#28919;&#29123;&#28903;">&#182;</a></h3><p>甲烷(\(CH_4\)) 燃烧的反应如下：</p>
 
-<img src="http://www.forkosh.com/mathtex.cgi? CH_4 + O_2 \rightarrow CO_2 + H_2O">
+$$CH_4 + O_2 \rightarrow CO_2 + H_2O$$
 
 <br />
-我们要寻找一组计量系数来配平这个反应式。计量系数<img src="http://www.forkosh.com/mathtex.cgi? \(\nu_s\)">是一组和物质s对应的系数，使得反应式可以写成下面的形式：
+我们要寻找一组计量系数来配平这个反应式。计量系数\(\nu_s\)是一组和物质s对应的系数，使得反应式可以写成下面的形式：
 
-<img src="http://www.forkosh.com/mathtex.cgi? \nu_{CH_4}CH_4 + \nu_{O_2}O_2 + \nu_{CO_2}CO_2 + \nu_{H_2O}H_2O = 0">
+$$\nu_{CH_4}CH_4 + \nu_{O_2}O_2 + \nu_{CO_2}CO_2 + \nu_{H_2O}H_2O$$
 
 <br/>负化学计量系数对应于反应物，正化学计量系数对应于该反应的产物。计量系数应使得反应前后各物质中原子守恒。如果反应中有带电物质，还应保证电荷守恒。
 <br/>计算计量系数可以使用 <a href="http://sympy.org/en/index.html">SymPy</a> 包
@@ -276,7 +255,7 @@ vCH4 == -1
 自燃是一类自发产生的燃烧反应。自燃推进器是这类反应的一种常见应用。</p>
 <p>一个例子是由SpaceX公司开发的SuperDraco引擎使用的甲基肼（MMH）和氧化剂四氧化二氮的自燃反应。</p>
 <p><strong>未配平</strong>的反应式如下：</p>
-<img src="http://www.forkosh.com/mathtex.cgi? CH_6N_2 + N_2O_4 \rightarrow CO_2 + NO + H_2O">
+$$CH_6N_2 + N_2O_4 \rightarrow CO_2 + NO + H_2O$$
 
 <p>下面我们计算计量系数配平反应式。考虑如下问题：一千克燃料需要多少氧化剂？</p>
 
@@ -352,19 +331,19 @@ Stoichiometric Coefficients:  {vN2O4: -5/2, vH2O: 3, vCH6N2: -1, vCO2: 1, vNO: 5
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#20363;3--&#19968;&#20010;&#27700;&#28342;&#28082;&#20013;&#26377;&#30005;&#33655;&#36716;&#31227;&#30340;&#21453;&#24212;">&#20363;3  &#19968;&#20010;&#27700;&#28342;&#28082;&#20013;&#26377;&#30005;&#33655;&#36716;&#31227;&#30340;&#21453;&#24212;<a class="anchor-link" href="#&#20363;3--&#19968;&#20010;&#27700;&#28342;&#28082;&#20013;&#26377;&#30005;&#33655;&#36716;&#31227;&#30340;&#21453;&#24212;">&#182;</a></h3>
 
-<br/>金属镉<img src="http://www.forkosh.com/mathtex.cgi? Cd">溶解于浓硝酸，生成<img src="http://www.forkosh.com/mathtex.cgi? Cd^{+2}">离子和一氧化氮(<img src="http://www.forkosh.com/mathtex.cgi?  NO">).
+<br/>金属镉\(Cd\)溶解于浓硝酸，生成\(Cd^{2+}\)离子和一氧化氮\(NO\).
 <br />反应式如下：
 <br />
-<img src="http://www.forkosh.com/mathtex.cgi?  Cd + NO_3^- \longrightarrow Cd^{+2} + NO">
+$$Cd + NO_3^- \longrightarrow Cd^{2+} + NO$$
 
 <br />
 观察两侧的电荷，这个反应式显然无法直接配平。
 <br />对于这类反应，我们需要考虑水和溶液中的离子。配平反应式，我们考虑下面的8种物质：
 
 <br/>
-<img src="http://www.forkosh.com/mathtex.cgi?  Cd,\ H_2O,\ HNO_3,\ NO,\ Cd^{+2},\ H^+,\ OH^-,\ NO_3^-">
+$$Cd,\ H_2O,\ HNO_3,\ NO,\ Cd^{2+},\ H^+,\ OH^-,\ NO_3^-$$
 <br/>
-设8个计量系数。接下来写出原子守恒的约束条件（4个，对应4种原子），电荷守恒约束条件（1个），并将<img src="http://www.forkosh.com/mathtex.cgi? Cd">的计量系数指定为1（指定basis，1个）：
+设8个计量系数。接下来写出原子守恒的约束条件（4个，对应4种原子），电荷守恒约束条件（1个），并将\(Cd\)的计量系数指定为1（指定basis，1个）：
 
 </div>
 </div>
@@ -426,7 +405,7 @@ vCd == -1
 <div class="text_cell_render border-box-sizing rendered_html">
 
 这里，变量数多于方程数，因此有一定的<em>自由度（degrees of freedom）</em>。我们需要做出额外的假设。
-<br />我们假设在浓硝酸中，硝酸完全电离，即有 <img src="http://www.forkosh.com/mathtex.cgi? \nu_{HNO_3}=0">.
+<br />我们假设在浓硝酸中，硝酸完全电离，即有 \(\nu_{HNO_3}=0\).
 
 </div>
 </div>
@@ -473,10 +452,10 @@ vCd == -1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-其中6个计量系数已经确定，但还存在水和 <img src="http://www.forkosh.com/mathtex.cgi? \nu_{OH^-}"> 计量系数的依赖关系。考虑水的电离：<br>
-<img src="http://www.forkosh.com/mathtex.cgi? H_2O \longrightarrow H^+ + OH^-">
+其中6个计量系数已经确定，但还存在水和\(\nu_{OH^-}\)计量系数的依赖关系。考虑水的电离：<br>
+$$H_2O \longrightarrow H^+ + OH^-$$
 <br/>
-我们令 <img src="http://www.forkosh.com/mathtex.cgi? \nu_{H_2O} = 0">
+我们令 \(\nu_{H_2O} = 0\)
 
 </div>
 </div>
@@ -524,7 +503,7 @@ vCd == -1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>到此，给出了平衡的反应式：</p>
 
-<img src="http://www.forkosh.com/mathtex.cgi? Cd + \frac{4}{3}\,H^+ + \frac{2}{3}\,NO_3^- \longrightarrow Cd^{+2} + \frac{4}{3}\,OH^- + \frac{2}{3}\,NO "> 
+$$Cd + \frac{4}{3}\,H^+ + \frac{2}{3}\,NO_3^- \longrightarrow Cd^{2+} + \frac{4}{3}\,OH^- + \frac{2}{3}\,NO$$
 
 </div>
 </div>

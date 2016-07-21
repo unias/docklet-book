@@ -106,28 +106,7 @@ div#notebook {
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
+</head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -184,18 +163,18 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-矩阵指数是相应的标量函数的直接推广。请记住<img src="http://www.forkosh.com/mathtex.cgi? \exp(x)">的泰勒级数展开：
+矩阵指数是相应的标量函数的直接推广。请记住\(\exp(x)\)的泰勒级数展开：
 <br />
-<img src="http://www.forkosh.com/mathtex.cgi? \exp(x) = \sum_{k = 0}^\infty \frac{x^k}{k!}">
+$$\exp(x) = \sum_{k = 0}^\infty \frac{x^k}{k!}$$
 
 <br />我们可以利用矩阵乘法将它应用到方阵：
 <br />
-<img src="http://www.forkosh.com/mathtex.cgi? \exp(A) = \sum_{k = 0}^\infty \frac{A^k}{k!}">
+$$\exp(A) = \sum_{k = 0}^\infty \frac{A^k}{k!}$$
 <br />矩阵指数的2个最有用的属性是：
-<br /><img src="http://www.forkosh.com/mathtex.cgi? \exp((a + b)A) = \exp(aA)\exp(bA)">
+<br />$$\exp((a + b)A) = \exp(aA)\exp(bA)$$
 <br />
 且当两个矩阵A和B满足AB = BA时,<br />
-<img src="http://www.forkosh.com/mathtex.cgi? \exp(A + B) = \exp(A)\exp(B)}">
+$$\exp(A + B) = \exp(A)\exp(B)$$
 
 </div>
 </div>
@@ -235,18 +214,18 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>矩阵指数的一个大亮点是，能够直接给出微分方程的解：
-<br/><img src="http://www.forkosh.com/mathtex.cgi? y'(t) = A y(t),\qquad y(0) = y_0">
+$$y'(t) = A y(t),\qquad y(0) = y_0$$
 <br />
-对于 <img src="http://www.forkosh.com/mathtex.cgi? y, y_0 \in \mathbb{C}^n">
-且 <img src="http://www.forkosh.com/mathtex.cgi? A \in \mathbb{C}^{n \times n}">
+对于 \(y, y_0 \in \mathbb{C}^n\)
+且 \(A \in \mathbb{C}^{n \times n}\)
 <br />
 解为：
 <br/>
-<img src="http://www.forkosh.com/mathtex.cgi? y(t) = \exp(At) y_0">
+\(y(t) = \exp(At) y_0\)
 <br/>知道这一点，我们可以直接地计算y(t)的解，而不必使用像欧拉方法那样的时间步进方法。
 让我们看一个简单的例子：
 <br/>
-<img src="http://www.forkosh.com/mathtex.cgi? y'(t) = \begin{bmatrix} 1 & -20 \\ 3 & 4 \\ \end{bmatrix} y(t), \qquad y(0) = \begin{bmatrix}1\\0\end{bmatrix},\qquad t \in [0, 1]">
+$$y'(t) = \begin{bmatrix} 1 & -20 \\ 3 & 4 \\ \end{bmatrix} y(t), \qquad y(0) = \begin{bmatrix}1\\0\end{bmatrix},\qquad t \in [0, 1]$$
 
 
 
@@ -466,7 +445,7 @@ AElFTkSuQmCC
 <p>矩阵指数可以用于寻找网络中最具影响的节点。
 所谓网络，包括一组<strong>节点</strong>，以及一组连接这些节点的<strong>边</strong>。我们使用邻接矩阵来描述一个网络。
 <br />
-若节点i，j之间有边，则<img src="http://www.forkosh.com/mathtex.cgi? A_{ij} = 1">，否则<img src="http://www.forkosh.com/mathtex.cgi? A_{ij} = 0">
+若节点i，j之间有边，则\(A_{ij} = 1\)，否则\(A_{ij} = 0\)
 <br />我们考虑下面的矩阵：</p>
 
 </div>
@@ -776,10 +755,12 @@ ERERg/0/EyJBYWj8WPoAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>衡量网络中节点重要性的一个常用指标是<strong>中心度</strong>。用<img src="http://www.forkosh.com/mathtex.cgi? A^k_{ij}">表示想哦那个节点i到节点j的长度为k的路径条数。我们可以如下计算节点i的中心度：将所有对中心度的贡献值（长度不等的由节点i到自身的路径数）相加</p>
-<img src="http://www.forkosh.com/mathtex.cgi? c(i) = \alpha_1 A_{ii} + \alpha_2 A^2_{ii} + \alpha_3 A^3_{ii} + \cdots"><p>这里的系数<img src="http://www.forkosh.com/mathtex.cgi? \alpha_k">待定
-一般而言，我们假定和长的路径相比，短路径更重要，因此<img src="http://www.forkosh.com/mathtex.cgi? \alpha_k \ge \alpha_{k+1}">.
-已经有了许多计算系数<img src="http://www.forkosh.com/mathtex.cgi? \alpha_k">的公式， 如果取<br/><img src="http://www.forkosh.com/mathtex.cgi? \alpha_k = \frac{1}{k!}"> <br/>就有<img src="http://www.forkosh.com/mathtex.cgi? c(i) = \exp(A)"></p>
+<p>衡量网络中节点重要性的一个常用指标是<strong>中心度</strong>。用\(A^k_{ij}\)表示想哦那个节点i到节点j的长度为k的路径条数。我们可以如下计算节点i的中心度：将所有对中心度的贡献值（长度不等的由节点i到自身的路径数）相加</p>
+\(c(i) = \alpha_1 A_{ii} + \alpha_2 A^2_{ii} + \alpha_3 A^3_{ii} + \cdots\)<p>这里的系数\(\alpha_k\)待定
+一般而言，我们假定和长的路径相比，短路径更重要，因此\(\alpha_k \ge \alpha_{k+1}\).
+已经有了许多计算系数\(\alpha_k\)的公式， 如果取<br/>
+$$\alpha_k = \frac{1}{k!}$$
+就有\(c(i) = \exp(A)\)</p>
 <p>看我们之前给出的网络，我们直观上期望节点1就是那个最重要的节点:它的度数(degree)最大，而且与节点3, 4, 0, 2都相连。
 <br />现在我们就来计算每个节点的中心度，并对这些节点按照重要性递减的顺序排序：</p>
 

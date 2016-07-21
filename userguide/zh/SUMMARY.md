@@ -35,7 +35,7 @@
     * [R 软件包](notebook/r.md)
     * [使用Notebook](notebook/nb.md)
     * [各种样例](notebook/gallery.md)
-    * [python数据分析样例](notebook/beauty.html)
+    * [python数据分析样例](notebook/beauty.md)
         * [用Python分析《美女与野兽》](notebook/beauty.md)
         * [配平化学方程式](notebook/balancing-reactions.md)
         * [矩阵指数](notebook/matrix-exponential.md)
