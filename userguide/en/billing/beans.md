@@ -1,4 +1,4 @@
-# Beans #
+# What is 'Beans' #
 
 Beans are virtual currency in docklet. And docklet will use <img src='../images/bean.png'> to represent the beans.
 You can check your beans beside your portrait on the dashboard page, shown as follows:

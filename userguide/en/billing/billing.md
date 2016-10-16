@@ -1,9 +1,9 @@
 # Billing System #
 
 The billing system will bill user for each vnode **respectively**.
-Whenever the **running time** of a vnode reach **an hour**, system will bill 
+Whenever the **running time** of a vnode reach **an hour** or user **delete the vnode**, system will bill 
 user for the resources the vnode has used **from last billing time to now**.
-And user's beans will decrease to pay for it.
+And user's beans will decrease to pay for it. 
 
 The status page dispaly how many beans each node has cost, shown as follows:
 

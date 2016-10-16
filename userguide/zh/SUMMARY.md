@@ -42,4 +42,7 @@
         * [时间序列分析](notebook/time-series-analysis.md)
     * [R数据分析样例](notebook/docklet-bigdata-r.md)
     * [spark大数据分析样例](notebook/docklet-bigdata-spark.md)
-
+* [豆与计费系统](billing/README.md)
+    * [什么是"豆"](billing/beans.md)
+    * [计费系统](billing/billing.md)
+    * [如何获得豆](billing/getBeans.md)
