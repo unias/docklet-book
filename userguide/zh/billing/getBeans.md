@@ -2,9 +2,6 @@
 
 目前，你可以点击头像旁的豆图标或者"申请(apply)"按钮跳转到申请页面，如下所示：
 
-At present, you can click the beans icon or the "apply" button to the application page,
- shown as follow:
-
 <img >
 
 而在申请页面，你可以申请豆或者查询你之前豆申请。对于申请，你需要填写你申请的
