@@ -34,4 +34,7 @@
   * [R Packages](notebook/r.md)
   * [Notebook Usage](notebook/nb.md)
   * [Scientific Computation](notebook/gallery.md)
-
+* [Beans and Billing](billing/README.md)
+  * [What is 'Beans'](billing/beans.md)
+  * [Billing system](billing/billing.md)
+  * [How to get beans](billing/getBeans.md)
