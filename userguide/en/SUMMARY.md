@@ -34,4 +34,4 @@
   * [R Packages](notebook/r.md)
   * [Notebook Usage](notebook/nb.md)
   * [Scientific Computation](notebook/gallery.md)
-
+* [Beans and Billing](billing/README.md)

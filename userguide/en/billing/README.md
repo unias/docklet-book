@@ -8,5 +8,5 @@ This section will give a introduction on beans and billing system.
 And it will consist of three parts:
 
 * [What is 'Beans'](beans.md)
-* [How to billing](billing.md)
+* [Billing System](billing.md)
 * [How to get beans](getBeans.md)
