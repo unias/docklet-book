@@ -7,7 +7,9 @@ And user's beans will decrease to pay for it.
 
 The status page dispaly how many beans each node has cost, shown as follows:
 
-<img src>
+<img src='../images/statusbeans.jpg'>
+
+<img src='../images/realtimebeans.jpg'>
 
 Besides, the amount of beans to decrease this hour will be figured out according to the following formula:
 

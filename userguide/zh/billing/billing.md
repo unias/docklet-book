@@ -6,7 +6,9 @@
 
 状态(Status)页面展示了每个节点已经花费了多少豆，正如下所示：
 
-<img src>
+<img src='../images/statusbeans.jpg'>
+
+<img src='../images/realtimebeans.jpg'>
 
 此外，每次扣除的豆数会按照如下公式进行计算:
 
