@@ -21,7 +21,7 @@ the cpu time**. And D represents the **disk quota** instead of the used amount o
 constant value and "[ ]" means the final value will be top integral, which means the beans cost this hour 
 will at least be 1.
 
-At present, a = 1000s, b = 4000000MB, c = 4GB
+At present, a = 500s, b = 1000000MB, c = 4GB
 
 When your beans are equal to or less than 0, **all your vclusters(workspaces) will be stopped**.
 And you **can not create, start and scale out(add node) any workspace**.
