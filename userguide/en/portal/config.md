@@ -43,7 +43,7 @@ The user configures this URL to be proxied to one of his container
 `172.16.0.45:80`.
 
 If an nginx server is running at `172.16.0.45`, then the following
-directives could be put in `/etc/nginx/site-enabled/default`
+directives could be put in `/etc/nginx/sites-enabled/default`
 
 ```
 location /_web/root/test/  {

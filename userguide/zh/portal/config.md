@@ -37,7 +37,7 @@ WEB服务。用户可以定义由哪个容器提供该WEB服务。
 用户配置该URL由内部IP地址为 `172.16.0.45:80` 的容器提供服务。
 
 如果该容器运行 nginx, 那么可以在nginx的配置文件
-`/etc/nginx/site-enabled/default` 中增加下述指令:
+`/etc/nginx/sites-enabled/default` 中增加下述指令:
 
 ```
 location /_web/root/test/  {

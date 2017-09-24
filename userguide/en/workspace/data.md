@@ -8,7 +8,7 @@ Click **New** - **Folder** can create a folder. Click **New** - ** Text File
 ** can create a text file with name *untitled.txt*，and enter the [File Editing](edit.md) webpage.
 
 Click **Upload**,  users can upload their data files to the Workspace.
-For technical reasons, now the maximum upload data size is 25 MB. For
+For technical reasons, now resuming from a breakpoint is not supported. For
 large data file, it is better to use server-server transfering method.
 Users can open [Terminal](terminal.md), using `wget` or `curl` to
 **download** from some HTTP server. This has an advantage: even if the
