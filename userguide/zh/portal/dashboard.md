@@ -6,7 +6,7 @@
 
 初始时工作区列表为空，用户需要创建一个工作区。
 点击 **Add Workspace**，进入创建工作区的页面，选择镜像，创建工作区
-**tee**，如下图所示:
+**tee**，并选择数据中心位置为**pku**，如下图所示:
 
 <img src="../images/workspace-create.png" width="600" alt="add 
 workspace">

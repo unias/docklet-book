@@ -5,7 +5,7 @@ Dashboard is where users manage their Workspaces. Users can view
 
 Initially the Workspace list is empty. Users need to create a Workspace
 first. Click on **Add Workspace** will enter the web page for creating
-Workspace, then select the image, and create a Workspace named **tee**, as
+Workspace, then select the image, and create a Workspace named **tee**, with **pku** selected as the location of the data center, as
 illustrated as follows:
 
 <img src="../images/workspace-create.png" width="600" alt="add 
