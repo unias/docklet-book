@@ -17,6 +17,7 @@
     * [状态](portal/status.md)
     * [主机](portal/hosts.md)
     * [用户](portal/users.md)
+    * [设置](portal/setting.md)
     * [管理](portal/admin.md)
 * [工作区](workspace/README.md)
     * [数据管理](workspace/data.md)

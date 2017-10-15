@@ -16,6 +16,7 @@
   * [Status](portal/status.md)
   * [Hosts](portal/hosts.md)
   * [Users](portal/users.md)
+  * [Settings](portal/setting.md)
   * [Admin](portal/admin.md)
 * [Workspace](workspace/README.md)
   * [Data Management](workspace/data.md)
