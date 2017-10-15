@@ -26,35 +26,14 @@ can be used later on. Now the image list is shown as:
 Users can also **Share** their saved private images with others, to help
 them avoid tedious installation and configuration stuff.
 
-### Custom WEB access
+### TCP Port Mapping
 
-Docklet provides each vcluster a custom URL that could be used to access
-internal WEB service. Users can define which container this URL is
-proxied to. 
+Each Node can apply for a TCP port. The Node port will be mapped to the host port, and the TCP packets sent by the user to the host port will be transferred to this port. The service on the node needs to listen to the configured port.
 
-<img src="../images/config-proxy.png" alt="proxy service">
+The following picture shows the TCP port mapping webpage of **tee** Workspace:
 
-The above is an example showing that the user *root* has a Workspace
-named *note*, which has a public URL of 
+<img src="../images/config-tcp.png" width="700" alt="image config">
 
-`http://iwork.internetware.org/_web/root/note`
+Click **Apply** to add a TCP port mapping for a node：
 
-The user configures this URL to be proxied to one of his container
-`172.16.0.45:80`.
-
-If an nginx server is running at `172.16.0.45`, then the following
-directives could be put in `/etc/nginx/sites-enabled/default`
-
-```
-location /_web/root/test/  {
-    proxy_pass http://localhost/ ;
-}
-```
-
-Restart nginx, 
-
-```
-$ service nginx restart
-```
-
-then the above URL could be accessed from outside.
+<img src="../images/config-tcpapply.png" width="700" alt="image config">
