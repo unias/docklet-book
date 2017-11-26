@@ -48,33 +48,21 @@ the [official help](https://help.ubuntu.com/community/AptGet/Howto).
 
 ### Using your local terminal ###
 
-Users sometimes want to access docklet using their favorite local terminal in local computer. Since docklet vnode is behind the firewall, users can not connect to their vnodes directly, but can do so by way of a public ssh server.
+Users sometimes want to access docklet using their favorite local terminal in local computer. Since docklet vnode is behind the firewall, users can not connect to their vnodes directly, but can do so by way of port mapping.
 
-Suppose there is an ssh server with public address **pub.ssh**, your account
-name at this server is **myname** .
+Each Node can apply for multiple ports, but there is a quota limit. The Node port will be mapped to the host port, and the TCP packets sent by the user to the host port will be transferred to this port. The service on the node needs to listen to the configured port.
 
-Execute the following command in your docklet vnode:
+Users apply for port mapping in config page, and there shows the corresponding port mapping table item:
 
-```
-ssh -fNR 2222:localhost:22 myname@pub.ssh
-```
+<img src="../images/config-tcp.png" width="700" alt="image config">
+port 10000 is directly mapped to port 22 of the container. Connecting to the port 10000 of Host Public IP is equivalent to the connection to the container.
 
-Enter the passphrase. If success, then all connection to port 2222 of 
-pub.ssh will be forwarded to vnode **localhost:22**. 
-
-Now open your favorite local terminal in your local computer and ssh to
-**pub.ssh**,
+Suppose the user has an account in the container named **myname**, execute the following command in your local terminal:
 
 ```
-ssh myname@pub.ssh
+ssh -p 10000 myname@masterip
 ```
 
-Then execute ssh to connect to localhost:2222 in pub.ssh:
+masterip corresponds to 222.29.159.164 in the figure above. It may ask for a passphrase for root at the docklet vnode. You can set a passphase in the dockelt vnode using passwd command.
 
-```
-ssh root@localhost -p 2222
-```
-
-It may ask for a passphrase for root at the docklet vnode. You can set a passphase in the dockelt vnode using **passwd** command.
-
-More about ssh port forwarding, users may refer to ssh manual.
+More about **port mapping**, users may refer to relevant information online.

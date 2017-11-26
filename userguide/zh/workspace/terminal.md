@@ -46,35 +46,22 @@ $ apt-get clean
 
 ### 使用本地终端访问 ###
 
-用户有时希望用本地计算机上的终端通过ssh访问docklet vnode. 由于docklet
-vnode 在防火墙后面，因此用户不能直接用自己的计算机访问，但可以借助于一个
-公共的ssh服务器实现.
+用户有时希望用本地计算机上的终端访问docklet vnode。由于docklet
+vnode 在防火墙后面，因此用户不能直接用自己的计算机访问，可以借助TCP端口映射实现访问。
 
-假定有一个公共ssh服务器, 地址为 **pub.ssh**, 用户在该服务器上有一个帐号
-**myname** .
+用户的每一个节点都能申请多个端口，但总数有配额限制。设置的节点端口会映射到主机的一个端口，用户向主机端口发送的TCP包都会到转送到这个端口。节点上的服务需要监听配置的端口。
 
-用户在docklet vnode里执行下面的命令:
+用户在配置页面添加端口映射，添加后得到相应端口映射表项：
 
-```
-ssh -fNR 2222:localhost:22 myname@pub.ssh
-```
+<img src="../images/config-tcp.png" width="700" alt="image config">
+端口10000直接映射到了容器的22端口，与Host Public IP的10000端口连接等价于与容器相连接。
 
-成功后，所有连接到 **pub.ssh** 服务器上的 2222 端口 的ssh 请求都会转到
-docklet vnode的 **localhost:22** 地址.
-
-在本地计算机的终端中执行ssh命令 
+假定用户在容器中有一个账号 **myname**，在终端中执行ssh命令
 
 ```
-ssh myname@pub.ssh
+ssh -p 10000 myname@masterip
 ```
 
-在pub.ssh上面再执行ssh命令连接到本地的2222端口:
+masterip在上图中对应222.29.159.164。此时可能会要求输入密码，改密码是容器中的账号密码。可以用**passwd**命令为root用户设置一个，即可登录。
 
-```
-ssh root@localhost -p 2222
-```
-
-此时可能会要求输入密码。该密码是docklet vnode上的账号密码。可以用**passwd**
-命令为root用户设置一个，即可登录。
-
-更多关于 ssh 端口转发的技术，可网上咨询相关资料。
+更多关于 **端口映射** 的技术，可网上咨询相关资料。

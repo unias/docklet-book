@@ -28,7 +28,7 @@ them avoid tedious installation and configuration stuff.
 
 ### TCP Port Mapping
 
-Each Node can apply for a TCP port. The Node port will be mapped to the host port, and the TCP packets sent by the user to the host port will be transferred to this port. The service on the node needs to listen to the configured port.
+Each Node can apply for multiple TCP ports, but there is a quota limit. The Node port will be mapped to the host port, and the TCP packets sent by the user to the host port will be transferred to this port. The service on the node needs to listen to the configured port.
 
 The following picture shows the TCP port mapping webpage of **tee** Workspace:
 
