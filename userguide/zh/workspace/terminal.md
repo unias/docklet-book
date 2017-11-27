@@ -56,7 +56,7 @@ vnode 在防火墙后面，因此用户不能直接用自己的计算机访问�
 <img src="../images/config-tcp.png" width="700" alt="image config">
 端口10000直接映射到了容器的22端口，与Host Public IP的10000端口连接等价于与容器相连接。   
 
-假定用户在容器中有一个账号 **myname**，在终端中执行ssh命令
+假定用户在容器中有一个账号 **myname**，在终端中执行ssh命令：
 
 ```
 ssh -p 10000 myname@masterip
